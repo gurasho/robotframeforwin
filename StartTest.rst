@@ -23,15 +23,20 @@ Workflow tests
 .. code:: robotframework
 
     *** Test Cases ***
-    User can create a Cat
-      Send cmd    test
-      Status should be    String Test
+    Test string.exe With Original Library
+         Send cmd    test
+         Status should be    String Test
+
+    Test string.exe With Process Library
+         ${result} =    Run Process    string.exe
+         Should Match    ${result.stdout}    String Test
 
 .. code:: robotframework
 
     *** Settings ***
     Library           OperatingSystem
     Library           WinExeControlLibrary.py
+    Library           Process
   
 User keywords
 -------------
