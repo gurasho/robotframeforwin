@@ -3,14 +3,6 @@ import subprocess
 import sys
 
 class WinExeControlLibrary(object):
-
-    def __init__(self):
-        self._sut_path = os.path.join(os.path.dirname(__file__),
-                                      '', '', 'a.exe')
-        self._status = ''
-        self._returnstatus = ''
-
-    
     def send_cmd(self, stringname):
         self._sut_path = os.path.join(os.path.dirname(__file__),
                                       '', '', 'string.exe')
@@ -28,7 +20,3 @@ class WinExeControlLibrary(object):
         self._status = output.stdout.strip()
         print(self._status)
         print ('p.args={0} p.returncode={1} p.stdout="{2}" p.stderr="{3}"'.format (output.args, output.returncode, output.stdout, output.stderr))
-
-if __name__ == '__main__':
-   a =WinExeControlLibrary()
-   a.send_cmd('hoge')

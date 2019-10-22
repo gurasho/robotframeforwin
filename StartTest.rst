@@ -23,7 +23,7 @@ Workflow tests
 .. code:: robotframework
 
     *** Test Cases ***
-    Test string.exe With Original Library
+    Test string.exe With Self Library
          Send cmd    test
          Status should be    String Test
 
