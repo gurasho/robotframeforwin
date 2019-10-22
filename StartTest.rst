@@ -37,16 +37,3 @@ Workflow tests
     Library           OperatingSystem
     Library           WinExeControlLibrary.py
     Library           Process
-  
-User keywords
--------------
-.. code:: robotframework
-
-    *** Keywords ***
-    Clear login database
-        Remove file    ${DATABASE FILE}
-
-    Create valid user
-        [Arguments]    ${username}    ${password}
-        Create cat    ${username}    ${password}
-        Status should be    SUCCESS
